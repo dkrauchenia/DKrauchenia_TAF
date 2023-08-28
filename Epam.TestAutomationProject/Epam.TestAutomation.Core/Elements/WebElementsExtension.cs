@@ -16,7 +16,7 @@ namespace Epam.TestAutomation.Core.Elements
 
         private static Actions CreateAction()
         {
-            return Browser.Browser.Instance.Action;
+            return Browser.Browser.Instance.Actions;
         }
     }
 }

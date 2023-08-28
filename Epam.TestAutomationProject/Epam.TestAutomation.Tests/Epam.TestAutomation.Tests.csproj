@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Epam.TestAutomation.Core\Epam.TestAutomation.Core.csproj" />
+    <ProjectReference Include="..\Epam.TestAutomation.Pages\Epam.TestAutomation.Pages.csproj" />
     <ProjectReference Include="..\Epam.TestAutomation.Utilities\Epam.TestAutomation.Utilities.csproj" />
   </ItemGroup>
 

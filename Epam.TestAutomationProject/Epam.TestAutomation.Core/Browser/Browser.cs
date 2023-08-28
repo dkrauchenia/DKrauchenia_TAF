@@ -10,7 +10,7 @@ namespace Epam.TestAutomation.Core.Browser
     public class Browser
     {
         private static ThreadLocal<Browser> _browser;
-        private readonly IWebDriver _driver;
+        private IWebDriver _driver { get; set; }
         public string Url
         {
             get => _driver.Url;
@@ -48,7 +48,7 @@ namespace Epam.TestAutomation.Core.Browser
             return _driver.Url;
         }
 
-        public void GotToUrl(string url)
+        public void GoToUrl(string url)
         {
             Logger.Info($"Open url: {url}");
             _driver.Navigate().GoToUrl(url);
@@ -128,6 +128,8 @@ namespace Epam.TestAutomation.Core.Browser
 
         public WebDriverWait Waiters() => new(_driver, TestSettings.WebDriverTimeOut);
 
-        public Actions Action => new(_driver);
+        public Actions Action => new Actions(_driver);
+
+ 
     }
 }
