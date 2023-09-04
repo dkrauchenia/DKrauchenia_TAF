@@ -1,4 +1,5 @@
 ﻿using Epam.TestAutomation.Core.Elements;
+using Epam.TestAutomation.Core.Utils;
 using OpenQA.Selenium;
 using System.Collections.ObjectModel;
 
@@ -27,6 +28,7 @@ namespace Epam.TestAutomation.Core.BasePage
 
         public void AcceptAllCookies()
         {
+            Waiters.WaitForCondition(() => AcceptAllCookiesButton.IsDisplayed());
             AcceptAllCookiesButton.Click();
         }
     }

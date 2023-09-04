@@ -8,6 +8,9 @@ namespace Epam.TestAutomation.Pages.Pages
     {
         public override string Url => "https://www.epam.com/careers/job-listings";
 
-        public Button LocationTab => new Button(By.CssSelector(".js-tabs-title"));
+        public HtmlElement OurLocations => new HtmlElement(By.XPath("//div[@class='text']//span[contains(@class, 'museo-sans-light')]"));
+
+        public ElementsList<BaseElement> TabLinks => new ElementsList<BaseElement>(By.XPath("//div[contains(@class,'tabs-links-list')]//a"));
+
     }
 }

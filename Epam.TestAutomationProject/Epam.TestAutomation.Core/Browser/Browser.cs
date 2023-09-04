@@ -10,7 +10,8 @@ namespace Epam.TestAutomation.Core.Browser
     public class Browser
     {
         private static ThreadLocal<Browser> _browser;
-        private IWebDriver _driver { get; set; }
+        protected internal IWebDriver _driver { get; set; }
+        public IWebDriver Driver => _driver;
         public string Url
         {
             get => _driver.Url;

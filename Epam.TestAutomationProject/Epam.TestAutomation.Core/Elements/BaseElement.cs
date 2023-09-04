@@ -4,16 +4,21 @@ using System.Collections.ObjectModel;
 
 namespace Epam.TestAutomation.Core.Elements
 {
-    public abstract class BaseElement : IBaseElement
+    public class BaseElement : IBaseElement
     {
         private readonly IWebElement _element;
 
-        protected BaseElement(By locator)
+        public BaseElement()
+        {
+
+        }
+
+        public BaseElement(By locator)
         {
             _element = Browser.Browser.Instance.FindElement(locator);
         }
 
-        protected BaseElement(IWebElement element)
+        public BaseElement(IWebElement element)
         {
             _element = element;
         }

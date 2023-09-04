@@ -8,6 +8,7 @@ namespace Epam.TestAutomation.Pages.Pages
     {
         public override string Url => "https://www.epam.com/careers";
 
-        public Button FindYourDreamJob => new Button(By.CssSelector(".arrow [href*='job-listings'][tabindex='0']"));
+        public Button FindYourDreamJob => new Button(By.XPath("//div[@class='owl-item active']//a[@href='/careers/job-listings']"));
+
     }
 }

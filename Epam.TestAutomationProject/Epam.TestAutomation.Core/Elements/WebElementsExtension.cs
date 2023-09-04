@@ -8,15 +8,6 @@ namespace Epam.TestAutomation.Core.Elements
         {
             Browser.Browser.Instance.ExecuteScript("arguments[0].click()", element.OriginalWebElement);
         }
-
-        public static void DragAndDrop(this BaseElement element, BaseElement targetElement)
-        {
-            CreateAction().DragAndDrop(element.OriginalWebElement, targetElement.OriginalWebElement).Perform();
-        }
-
-        private static Actions CreateAction()
-        {
-            return Browser.Browser.Instance.Actions;
-        }
+       
     }
 }

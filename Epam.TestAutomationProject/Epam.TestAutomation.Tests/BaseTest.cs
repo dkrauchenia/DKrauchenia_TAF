@@ -21,7 +21,6 @@ namespace Epam.TestAutomation.Tests
         {
             Logger.Info("Test started to run");
             Browser.Instance.GoToUrl(TestSettings.ApplicationUrl);
-            Browser.Instance.Refresh();
             Waiters.WaitForPageLoad();
 
         }

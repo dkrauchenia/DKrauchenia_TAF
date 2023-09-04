@@ -1,10 +1,5 @@
 ﻿using Epam.TestAutomation.Core.Elements;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Epam.TestAutomation.Pages.Panels
 {
@@ -20,7 +15,7 @@ namespace Epam.TestAutomation.Pages.Panels
 
         public Button JoinOurTeam => new Button(By.XPath("//*[contains(@class,'top-navigation__main-link') and @href='/careers/job-listings']"));
 
-        public Button LanguageSelector => new Button(By.XPath("//*[@class='location-selector__button']"));
+        public Button LanguageSelector => new Button(By.XPath("//button[@class='location-selector__button']"));
 
         public Dropdown LanguageDropdown => new Dropdown(By.XPath("//*[@class='location-selector__panel']"));
 
