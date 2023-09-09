@@ -2,13 +2,7 @@
 using Epam.TestAutomation.Core.Elements;
 using Epam.TestAutomation.Core.Utils;
 using Epam.TestAutomation.Pages.Pages;
-using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace Epam.TestAutomation.Tests
@@ -41,7 +35,7 @@ namespace Epam.TestAutomation.Tests
                   .Build()
                   .Perform();
 
-            Assert.AreEqual(Browser.Instance.Url, _jobListingsPage.Url, "Incorrect page");
+            Assert.That(Browser.Instance.Url, Is.EqualTo(_jobListingsPage.Url), "Incorrect page");
         }
 
         [Test]
@@ -70,7 +64,7 @@ namespace Epam.TestAutomation.Tests
 
             var actualLocalizations = listOfLanguages.Select(a => a.GetText().Trim()).ToList();
 
-            CollectionAssert.AreEqual(expectedLocalizations, actualLocalizations, "Actual localizations do not correspond to expected");
+            Assert.That(actualLocalizations, Is.EqualTo(expectedLocalizations), "Actual localizations do not correspond to expected");
 
         }
     }

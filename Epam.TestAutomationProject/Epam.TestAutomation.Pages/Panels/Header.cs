@@ -21,6 +21,8 @@ namespace Epam.TestAutomation.Pages.Panels
 
         public ElementsList<BaseElement> ListOfLanguages => new ElementsList<BaseElement>(By.XPath("//*[@class='location-selector__item']"));
 
+        public Link FrequentSearchQuery => new Link(By.XPath("//*[@class='frequent-searches__item'][1]"));
+
         public Header(By locator) : base(locator) { }
     }
 }

@@ -78,6 +78,11 @@ namespace Epam.TestAutomation.Core.Browser
             ExecuteScript("arguments[0].scrollIntoView(true);", element);
         }
 
+        public void ScrollToBottom()
+        {
+            ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
+        }
+
         public IWebElement FindElement(By locator)
         {
             return _driver.FindElement(locator);

@@ -1,13 +1,8 @@
 ﻿using Epam.TestAutomation.Core.Browser;
 using Epam.TestAutomation.Core.Elements;
 using Epam.TestAutomation.Pages.Pages;
-using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Epam.TestAutomation.Tests
 {
@@ -43,7 +38,7 @@ namespace Epam.TestAutomation.Tests
 
             List<string> actualCountries = tabLinks.Select(a => a.GetText().Trim()).ToList();
 
-            CollectionAssert.AreEqual(expectedCountries, actualCountries, "Actual countries do not correspond to expected");
+            Assert.That(actualCountries, Is.EqualTo(expectedCountries), "Actual countries do not correspond to expected");
         }
     }
 }

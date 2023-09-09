@@ -1,10 +1,6 @@
-﻿using Epam.TestAutomation.Core.Utils;
+﻿using Epam.TestAutomation.Core.Browser;
+using Epam.TestAutomation.Core.Utils;
 using Epam.TestAutomation.Pages.Pages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Epam.TestAutomation.Tests
 {
@@ -36,7 +32,46 @@ namespace Epam.TestAutomation.Tests
                 .Take(resultsAmount)
                 .All(a => a.GetText().ToLower().Contains(keyWord.ToLower()));
 
-            Assert.IsTrue(searchResultsContainKeyWord, "Not all of the search results contain the key word");
+            Assert.That(searchResultsContainKeyWord, Is.True, "Not all of the search results contain the key word");
         }
+
+        [Test]
+        [TestCase ("Business Analysis")]
+        public void VerifyThatArticleTitleContainsKeyWord(string keyWord)
+        {
+            _mainPage.Header.SearchButton.Click();
+            _mainPage.Header.SearchForm.SendKeys(keyWord);
+            _mainPage.Header.FindButton.Click();
+
+            Waiters.WaitForPageLoad();
+
+            var searchResultTitle = _searchResultsPage.FirstSearchResult.GetText().ToLower();
+
+            _searchResultsPage.FirstSearchResult.Click();
+
+            var articleTitle = _searchResultsPage.ArticleHeader.GetText().ToLower();
+
+            Assert.That(searchResultTitle, Is.EqualTo(articleTitle), "Search result title doesn't match the article title!");
+        }
+
+        [Test]
+        [TestCase ("20")]
+        public void VerifyNumberOfArticlesDisplayedOnSearchResultsPage(string expectedResultsAmount)
+        {
+            _mainPage.Header.SearchButton.Click();
+            _mainPage.Header.FrequentSearchQuery.Click();
+            _mainPage.Header.FindButton.Click();
+
+            Waiters.WaitForPageLoad();
+
+            Browser.Instance.ScrollToBottom();
+            Browser.Instance.ScrollToElement(_searchResultsPage.ViewMore.OriginalWebElement);
+
+            var actualResultsAmount = _searchResultsPage.SearchResultsList.GetElements().Count.ToString();
+
+            Assert.That(actualResultsAmount, Is.EqualTo(expectedResultsAmount), "Search results amount doesn't correspond to expected!");
+        }
+
+
     }
 }
