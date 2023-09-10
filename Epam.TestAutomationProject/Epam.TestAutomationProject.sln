@@ -12,9 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Runsettings", "Runsettings"
 		EpamTest.runsettings = EpamTest.runsettings
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.TestAutomation.Pages", "Epam.TestAutomation.Pages\Epam.TestAutomation.Pages.csproj", "{7515074A-B6F8-486C-91D8-BC65CBB48A4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam.TestAutomation.Pages", "Epam.TestAutomation.Pages\Epam.TestAutomation.Pages.csproj", "{7515074A-B6F8-486C-91D8-BC65CBB48A4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.TestAutomation.Tests", "Epam.TestAutomation.Tests\Epam.TestAutomation.Tests.csproj", "{66785B72-4D6C-408F-A3D8-BD97ABD76AA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam.TestAutomation.Tests", "Epam.TestAutomation.Tests\Epam.TestAutomation.Tests.csproj", "{66785B72-4D6C-408F-A3D8-BD97ABD76AA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.TestAutomation.Tests.BDD", "Epam.TestAutomation.Tests.BDD\Epam.TestAutomation.Tests.BDD.csproj", "{1F70DB15-1BA0-4B2E-A1FE-01AF8E8B71F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{66785B72-4D6C-408F-A3D8-BD97ABD76AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66785B72-4D6C-408F-A3D8-BD97ABD76AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66785B72-4D6C-408F-A3D8-BD97ABD76AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F70DB15-1BA0-4B2E-A1FE-01AF8E8B71F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F70DB15-1BA0-4B2E-A1FE-01AF8E8B71F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F70DB15-1BA0-4B2E-A1FE-01AF8E8B71F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F70DB15-1BA0-4B2E-A1FE-01AF8E8B71F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

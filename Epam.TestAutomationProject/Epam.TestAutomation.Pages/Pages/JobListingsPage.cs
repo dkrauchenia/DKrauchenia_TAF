@@ -12,5 +12,7 @@ namespace Epam.TestAutomation.Pages.Pages
 
         public ElementsList<BaseElement> TabLinks => new ElementsList<BaseElement>(By.XPath("//div[contains(@class,'tabs-links-list')]//a"));
 
+        public Button RegisterYourInterest => new Button(By.XPath("//a[contains(@class, 'button-ui-23') and contains(@href, 'apply-now')]"));
+
     }
 }

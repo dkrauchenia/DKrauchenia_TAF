@@ -9,6 +9,6 @@ namespace Epam.TestAutomation.Pages.Pages
     {
         public override string Url => TestSettings.ApplicationUrl;
 
-        public Header Header => new Header(By.XPath("//*[@class = 'header__content']"));
+        public Header Header => new Header(By.XPath("//*[@class ='header__content']"));
     }
 }
